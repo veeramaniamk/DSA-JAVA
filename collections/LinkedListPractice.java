@@ -4,9 +4,14 @@ import java.util.LinkedList;
 
 public class LinkedListPractice {
 
-    public static void main(String[] a) {
-        LinkedList linkedList = new LinkedList<>();
+    public String checkFunction() {
+        return "Hellow d";
+    }
+
+    public void testLinkedList() {
+
         
+
     }
 
 }
