@@ -1,24 +1,2 @@
 # Ignore all .class files
 *.class
-
-# Optionally, ignore other typical Java build outputs
-# Ignore compiled output directories (commonly used in Java projects)
-bin/
-out/
-build/
-
-# Ignore IDE-specific files (optional but common)
-# IntelliJ IDEA
-.idea/
-*.iml
-
-# Eclipse
-.project
-.classpath
-.settings/
-
-# NetBeans
-nbproject/private/
-build/
-nbbuild/
-dist/
