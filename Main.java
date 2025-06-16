@@ -10,7 +10,14 @@ public class Main {
             {1,2,3}
         };
         try {
-          matrix.addition(a, a);
+          int[][] mat = matrix.addition(a, a);
+          for(int i=0;i<mat.length;i++) {
+
+            for(int j=0;j<mat[i].length;j++) {
+                System.out.print("i=" + i +"+"+ "j=" + j + "--" + mat[i][j] + " ");
+            }
+            System.out.println();
+          }
         } catch (Exception e) {
             // TODO: handle exception
             e.printStackTrace();

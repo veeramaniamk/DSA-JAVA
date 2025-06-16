@@ -2,15 +2,13 @@ package util;
 
 public class Matrix {
 
-    public void addition(int[][] a, int[][] b) throws Exception {
+    public int[][] addition(int[][] a, int[][] b) throws Exception {
 
         if(a.length == 0 || b.length == 0) throw new IllegalStateException("Empty Matrix Found");
 
-        boolean itIsPossibleToCalculate = true;
         int firstMatrixRowCount = a.length;
         int secondMatrixRowCount = b.length;
         int firstMatrixColumnCount = a[0].length;
-        int secondMatrixColumnCount = b[0].length;
 
         System.err.println("a.length -> "+ firstMatrixRowCount + " a[0].length -> " + a[0].length);
 
@@ -28,8 +26,17 @@ public class Matrix {
             if(a[i].length!=b[i].length) throw new IllegalStateException("First and Second matrix column values are not matching");
         }
 
-        
+        int[][] result = new int[firstMatrixRowCount][firstMatrixColumnCount];
 
+        for(int i=0;i<firstMatrixRowCount;i++) {
+
+            for(int j=0;j<a[i].length;j++) {
+                result[i][j] = a[i][j] + b[i][j];
+            }
+
+        }
+
+        return result;
     }
     
 }
