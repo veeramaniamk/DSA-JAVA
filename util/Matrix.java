@@ -38,5 +38,13 @@ public class Matrix {
 
         return result;
     }
+
+    public int[][] sub(int[][] a, int[][] b) {
+
+
+        int[][] result = new int[0][0];
+
+        return result;
+    }
     
 }
