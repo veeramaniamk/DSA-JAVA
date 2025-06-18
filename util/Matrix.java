@@ -37,9 +37,8 @@ public class Matrix {
         return result;
     }
 
-    public int[][] multiplication(int[][] a, int[][] b) {
+    public int[][] multiplication(int[][] a, int[][] b) throws Exception {
 
-        
         
 
         int[][] result = new int[0][0];

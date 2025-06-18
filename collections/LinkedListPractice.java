@@ -1,6 +1,6 @@
 package collections;
 
-import java.util.LinkedList;
+// import java.util.LinkedList;
 
 public class LinkedListPractice {
 
