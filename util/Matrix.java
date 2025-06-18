@@ -10,8 +10,6 @@ public class Matrix {
         int secondMatrixRowCount = b.length;
         int firstMatrixColumnCount = a[0].length;
 
-        System.err.println("a.length -> "+ firstMatrixRowCount + " a[0].length -> " + a[0].length);
-
         for(int i=0;i<firstMatrixRowCount;i++) {
             if(a[0].length!=a[i].length) throw new IllegalStateException("First matrix column values are not same");
         }
@@ -39,8 +37,10 @@ public class Matrix {
         return result;
     }
 
-    public int[][] sub(int[][] a, int[][] b) {
+    public int[][] multiplication(int[][] a, int[][] b) {
 
+        
+        
 
         int[][] result = new int[0][0];
 
