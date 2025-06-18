@@ -1,5 +1,7 @@
 package util;
 
+import exception.MatrixException;
+
 public class Matrix {
 
     public int[][] addition(int[][] a, int[][] b) throws Exception {
@@ -37,12 +39,32 @@ public class Matrix {
         return result;
     }
 
-    public int[][] multiplication(int[][] a, int[][] b) throws Exception {
+    public int[][] multiplication(int[][] a, int[][] b) throws MatrixException {
 
-        if(a.length == 0 || b.length == 0) throw new IllegalStateException("Empty Matrix Found");
+        if(a.length == 0 || b.length == 0 || a[0].length ==0 || b[0].length == 0) throw new MatrixException("Empty Matrix Found");
 
+        int aRows    = a.length;
+        int aColumns = a[0].length;
+        int bRows    = b.length;
+        int bColumns = b[0].length;
 
-        int[][] result = new int[0][0];
+        if(aColumns != bRows) throw new MatrixException("Given matrix not posible for multiplication");
+
+        int[][] result = new int[aRows][bColumns];
+
+        for(int i=0;i<a.length;i++) {
+
+            for(int j=0;j<a[i].length;j++) {
+
+                for(int k=0;k<b[j].length;k++) {
+
+                    result[i][j] += a[i][k] * b[k][j];
+
+                }
+
+            }
+
+        }
 
         return result;
     }

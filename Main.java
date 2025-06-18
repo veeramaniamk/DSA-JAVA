@@ -4,16 +4,21 @@ import util.Matrix;
 public class Main {
     
     public static void main(String[] args) {
+        
         Matrix matrix = new Matrix();
+
         int[][] a = {
-            {1,2,3}
+           {1, 2, 3},
+            {4, 5, 6}
         };
 
         int[][] b = {
-            {1,2,3}, {22,1,2}
+             {7, 8, 9},
+            {10, 11, 12}
         };
+
         try {
-          int[][] mat = matrix.addition(a, b);
+          int[][] mat = matrix.multiplication(a, b);
           for(int i=0;i<mat.length;i++) {
 
             for(int j=0;j<mat[i].length;j++) {
