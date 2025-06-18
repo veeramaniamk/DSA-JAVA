@@ -39,7 +39,8 @@ public class Matrix {
 
     public int[][] multiplication(int[][] a, int[][] b) throws Exception {
 
-        
+        if(a.length == 0 || b.length == 0) throw new IllegalStateException("Empty Matrix Found");
+
 
         int[][] result = new int[0][0];
 
