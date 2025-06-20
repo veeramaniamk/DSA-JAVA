@@ -52,11 +52,12 @@ public class Matrix {
 
         int[][] result = new int[aRows][bColumns];
 
+        //First Matrix Length (row count)
         for(int i=0;i<a.length;i++) {
 
-            for(int j=0;j<a[i].length;j++) {
+            for(int j=0;j<b[i].length;j++) {
 
-                for(int k=0;k<b[j].length;k++) {
+                for(int k=0;k<b.length;k++) {
 
                     result[i][j] = result[i][j] + (a[i][k] * b[k][j]);
 
