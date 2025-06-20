@@ -58,7 +58,7 @@ public class Matrix {
 
                 for(int k=0;k<b[j].length;k++) {
 
-                    result[i][j] += a[i][k] * b[k][j];
+                    result[i][j] = result[i][j] + (a[i][k] * b[k][j]);
 
                 }
 
