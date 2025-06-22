@@ -19,7 +19,7 @@ public class Main {
         };
 
         try {
-          int[][] mat = matrix.multiplication(a, b);
+          int[][] mat = matrix.transpose(b);
           for(int i=0;i<mat.length;i++) {
 
             for(int j=0;j<mat[i].length;j++) {

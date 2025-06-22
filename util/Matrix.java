@@ -69,5 +69,24 @@ public class Matrix {
 
         return result;
     }
+
+    public int[][] transpose(int[][] a) throws MatrixException {
+
+        if(a.length == 0 || a[0].length ==0) throw new MatrixException("Empty Matrix Found");
+
+        int[][] result = new int[a[0].length][a.length];
+
+        for(int i=0;i<a.length;i++) {
+
+            for(int j=0;j<a[i].length;j++) {
+
+                result[j][i] = a[i][j];
+
+            }
+
+        }
+
+        return result;
+    }
     
 }
