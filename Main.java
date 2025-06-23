@@ -7,6 +7,9 @@ public class Main {
         
         Matrix matrix = new Matrix();
 
+        String string = "";
+
+
         int[][] a = {
            {1, 2, 3},
             {4, 5, 6}
@@ -19,13 +22,10 @@ public class Main {
         };
 
         try {
-          int[][] mat = matrix.transpose(b);
-          for(int i=0;i<mat.length;i++) {
-
-            for(int j=0;j<mat[i].length;j++) {
-                System.out.print(
-                    i+""+j+"-"+mat[i][j]+" "
-                );
+          int[][] mat = matrix.generateSpiralMatrix(1000);
+          for (int[] row : mat) {
+            for (int val : row) {
+                System.out.printf("%3d ", val);
             }
             System.out.println();
           }

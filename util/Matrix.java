@@ -88,5 +88,43 @@ public class Matrix {
 
         return result;
     }
+
+    public int[][] generateSpiralMatrix(int n) {
+        // Determine the minimum square matrix size
+        int size = (int) Math.ceil(Math.sqrt(n));
+        int[][] matrix = new int[size][size];
+
+        int top  = 0, bottom = size - 1;
+        int left = 0, right  = size - 1;
+        int num  = 1;
+
+        while (num <= n) {
+            // Top row
+            for (int i = left; i <= right && num <= n; i++) {
+                matrix[top][i] = num++;
+            }
+            top++;
+
+            // Right column
+            for (int i = top; i <= bottom && num <= n; i++) {
+                matrix[i][right] = num++;
+            }
+            right--;
+
+            // Bottom row
+            for (int i = right; i >= left && num <= n; i--) {
+                matrix[bottom][i] = num++;
+            }
+            bottom--;
+
+            // Left column
+            for (int i = bottom; i >= top && num <= n; i--) {
+                matrix[i][left] = num++;
+            }
+            left++;
+        }
+
+        return matrix;
+    }
     
 }
