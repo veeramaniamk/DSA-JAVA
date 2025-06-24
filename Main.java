@@ -43,5 +43,20 @@ public class Main {
         
     }
 
+    static void spiral(int a) {
+
+        int size = 0;
+        while(size * size > a) {
+            size++;
+        }
+
+        int left = 0, right = size - 1;
+        int top = 0, bottom = size - 1;
+        int number = 0;
+
+        int[][] result = new int[size][size];
+
+    }
+
 
 }
