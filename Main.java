@@ -21,6 +21,14 @@ public class Main {
             {13, 14}
         };
 
+        int size = 0, value = 5;
+        
+        while(size * size < value) {
+            size++;
+        }
+
+        System.out.println(size);
+
         try {
           int[][] mat = matrix.generateSpiralMatrix(1000);
           for (int[] row : mat) {
@@ -32,5 +40,8 @@ public class Main {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+        
     }
+
+
 }

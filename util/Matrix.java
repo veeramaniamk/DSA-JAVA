@@ -91,7 +91,7 @@ public class Matrix {
 
     public int[][] generateSpiralMatrix(int n) {
         // Determine the minimum square matrix size
-        int size = (int) Math.ceil(Math.sqrt(n));
+        int size = (int) Math.ceil(Math.sqrt(n)); //20
         int[][] matrix = new int[size][size];
 
         int top  = 0, bottom = size - 1;
