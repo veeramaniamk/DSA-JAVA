@@ -41,56 +41,63 @@ public class Main {
         //     System.out.println(e.getMessage());
         // }
 
-        spiral(25);
+        // spiral(25);
         
     }
 
-    static void spiral(int a) {
+    void fun() {
+        System.out.println("veera");
+        spiral(0);
+    }
 
+    static void spiral(int a) {
         int size = 0;
-        while(size * size > a) {
+        while(size * size < a) {
             size++;
         }
 
         int left = 0, right = size - 1;
         int top = 0, bottom = size - 1;
-        int number = 1;
+        int number = 0;
 
         int[][] result = new int[size][size];
 
         while(number<=size) {
 
-            for(int i=left;i<=right && number<=size;i++) {
-                result[left][i] = number++;
+            for(int i=left;i<=right && number<=a;i++) {
+                result[top][i] = number++;
             }
             top++;
 
-            for(int i=top;i<=bottom && number<=size;i++) {
+            for(int i=top;i<=bottom && number<=a;i++) {
                 result[i][right] = number++;
             }
             right--;
 
-            for(int i=right;i>=left && number<=size;i--) {
+            for(int i=right;i>=left && number<=a;i--) {
                 result[bottom][i] = number++;
             }
             bottom--;
 
-            for(int i=bottom;i>=top && number<=size;i--) {
-                result[left][i] = number++;
+            for(int i=bottom;i>=top && number<=a;i--) {
+                result[i][left] = number++;
             }
             left++;
-
         }
 
         int[][] mat = result;
-          for (int[] row : mat) {
+        for (int[] row : mat) {
             for (int val : row) {
                 System.out.printf("%3d ", val);
             }
             System.out.println();
-          }
+        }
+
+        System.out.println(result[3][size - 1]);
 
     }
+
+
 
 
 }
