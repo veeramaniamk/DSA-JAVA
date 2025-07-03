@@ -41,12 +41,11 @@ public class Main {
         //     System.out.println(e.getMessage());
         // }
 
-        // spiral(25);
-        
+        function(25);
     }
 
     void fun() {
-        System.out.println("veera");
+        System.out.println("java");
         spiral(0);
     }
 
@@ -98,6 +97,34 @@ public class Main {
     }
 
 
+    private static void function(int a) {
 
+        int size = 0;
+        while(size * size > a) {
+            size++;
+        }
+
+        int top = 0, right = size - 1, bottom = size - 1, left = 0, number = 0;
+
+        int[][] result = new int[size][size];
+
+        while(number<=a) {
+
+            for(int i=top;i<=right && number>=size;i++) {
+                result[right][i] = number++;
+            }
+            top++;
+
+        }
+
+        int[][] mat = result;
+        for (int[] row : mat) {
+            for (int val : row) {
+                System.out.printf("%3d ", val);
+            }
+            System.out.println();
+        }
+
+    }
 
 }
