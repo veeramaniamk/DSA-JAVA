@@ -9,6 +9,7 @@ public class Main {
         for(int val:a) {
             System.out.println(val);
         }
+        
     }
 
 }
