@@ -1,5 +1,7 @@
 package util;
 
+import java.util.ArrayList;
+
 public class Numbers {
 
     public int[] fibonacci(int length) {
@@ -17,6 +19,12 @@ public class Numbers {
         }
 
         return result;
+    }
+
+    public ArrayList<Integer> primeNumbers() {
+
+        
+        return new ArrayList<>();
     }
 
 }
