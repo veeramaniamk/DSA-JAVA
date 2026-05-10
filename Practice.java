@@ -16,7 +16,7 @@ public class Practice {
         return value.toString();
     }
 
-    static boolean palindrome(String str) throws Exception{
+    static boolean palindrome(String str) throws Exception {
         return reverse(str).equals(str);
     }
 
@@ -33,6 +33,25 @@ public class Practice {
         }
 
         return value;
+    }
+
+    static int secondLargestNumberInArray(int[] arr) throws Exception  {
+
+        if(arr==null || arr.length==0) throw new Exception("Invalid array");
+
+        int max = arr[0];
+        int secondMax = arr[0];
+
+        for(int a:arr) {
+            if(max<a) {
+                secondMax = max;
+                max = a;
+            } else if (secondMax<a && max!=a) {
+                secondMax = a;
+            }
+        }
+
+        return secondMax;
     }
 
 }
