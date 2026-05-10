@@ -20,8 +20,19 @@ public class Practice {
         return reverse(str).equals(str);
     }
 
-    static int largestNumberInArray(int[] arr) {
+    static int largestNumberInArray(int[] arr) throws Exception {
 
+        if(arr==null || arr.length==0) throw new Exception("Invalid array");
+
+        int value = arr[0];
+
+        for(int a:arr) {
+            if(value<a) {
+                value = a;
+            }
+        }
+
+        return value;
     }
 
 }

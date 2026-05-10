@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
 
-        System.out.println(Practice.palindrome("veeramani"));
+        System.out.println(Practice.largestNumberInArray(new int[]{}));
 
     }
 
