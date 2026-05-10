@@ -1,10 +1,12 @@
+
+
 public class Practice {
 
     static String reverse(String str) throws Exception {
 
         if(str==null  || str.isBlank()) throw new Exception("Invalid string value");
 
-        StringBuffer value = new StringBuffer(str);
+        StringBuilder value = new StringBuilder(str);
         value.reverse();
 
 //        for(int i = str.length()-1;i>=0;i--) {
@@ -12,6 +14,14 @@ public class Practice {
 //        }
 
         return value.toString();
+    }
+
+    static boolean palindrome(String str) throws Exception{
+        return reverse(str).equals(str);
+    }
+
+    static int largestNumberInArray(int[] arr) {
+
     }
 
 }
