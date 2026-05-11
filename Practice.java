@@ -1,5 +1,8 @@
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Practice {
 
     static String reverse(String str) throws Exception {
@@ -52,6 +55,43 @@ public class Practice {
         }
 
         return secondMax;
+    }
+
+    static int[] moveZerosLastInArray(int[] a) throws Exception{
+
+        if(a==null || a.length==0) {
+            throw new Exception("Invalid array");
+        }
+
+        int[] value = new int[a.length];
+        int index = 0;
+        for (int j : a) {
+            if (j != 0) {
+                value[index++] = j;
+            }
+        }
+        while(index<a.length) {
+            value[index++] = 0;
+        }
+        return value;
+    }
+
+    static int[] moveZerosFirstInArray(int[] a) {
+        int[] value = new int[a.length];
+
+        int index = a.length - 1;
+
+        for(int i=index;i>=0;i--) {
+            if(a[i]!=0) {
+                value[index--] = a[i];
+            }
+        }
+
+        while(index>=0) {
+            value[index--] = 0;
+        }
+
+        return value;
     }
 
 }
