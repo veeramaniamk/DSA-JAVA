@@ -8,5 +8,6 @@ public class test_file {
     //commit 7
     //commit 6
 
+    //middle commit
     //recent commit
 }
